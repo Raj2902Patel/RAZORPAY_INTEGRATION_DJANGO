@@ -13,7 +13,7 @@ def index(request):
        amount = int(request.POST.get('amount'))*100
        email = request.POST.get('email')
 
-       client = razorpay.Client(auth = ("rzp_test_pj8LAwuK1ujv2V","yKEV23EZG8gA9lF3VvIcxgBv"))
+       client = razorpay.Client(auth = ("rzp_test_qGgEIvctyraUs2","ij58YN6eiXruX2czbfEGfHjQ"))
        payment = client.order.create({'amount':amount,'currency':'INR','payment_capture':"1"})
 
        cof = Coffee(name=name,email=email,amount=amount,payment_id = payment['id'])
