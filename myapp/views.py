@@ -7,6 +7,9 @@ from django.template.loader import render_to_string
 
 # Create your views here.
 
+def handling_404(request,exception):
+    return render(request,'404.html',{})
+
 def index(request):
     if request.method == 'POST':
        name = request.POST.get('name')

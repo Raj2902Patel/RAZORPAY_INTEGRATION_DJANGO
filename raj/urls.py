@@ -24,3 +24,6 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('done',views.done,name='done'),
 ]
+
+
+handler404 = 'myapp.views.handling_404'
